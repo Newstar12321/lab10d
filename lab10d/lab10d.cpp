@@ -17,6 +17,7 @@ int main()
 	setlocale(LC_ALL, "ru");
 
 	string str;
+	cout << "Введите путь к файлу с исходными данными:\n";
 	getline(cin, str);		//		C:\\lab10\\text.txt
 
 	ifstream file;
@@ -38,6 +39,7 @@ int main()
 	}
 
 	string retstr;			//return string - путь к файлу,в который запишем ответ
+	cout << "Введите путь к файлу, в который запишем ответ:\n";
 	getline(cin, retstr);		 //		C:\\lab10\\return.txt
 
 	ofstream retfile; 
