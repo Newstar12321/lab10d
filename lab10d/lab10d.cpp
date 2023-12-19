@@ -37,10 +37,17 @@ int main()
 		file >> array[i];
 	}
 
-	cout << min_arr(array, n);
+	string retstr;			//return string - путь к файлу,в который запишем ответ
+	getline(cin, retstr);		 //		C:\\lab10\\return.txt
+
+	ofstream retfile; 
+	retfile.open(retstr);
+
+	retfile << min_arr(array, n);
 
 	delete[] array;
 	file.close();
+	retfile.close();
 }
 
 int min_arr(int* array, const size_t& n)
