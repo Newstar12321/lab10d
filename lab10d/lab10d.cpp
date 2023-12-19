@@ -24,7 +24,7 @@ int main()
 	file.open(str);
 	if (!file)
 	{
-		cerr << "Файл не открыт\n";
+		cerr << "Ошибка! Файл не открыт\n";
 		return 1;
 	}
 
@@ -44,6 +44,11 @@ int main()
 
 	ofstream retfile; 
 	retfile.open(retstr);
+	if (!retfile)
+	{
+		cerr << "Ошибка! Файл не открыт\n";
+		return 1;
+	}
 
 	retfile << min_arr(array, n);
 
